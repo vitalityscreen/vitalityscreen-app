@@ -9,16 +9,33 @@
 <body>
     <div class="container">
         <img src="/static/logo.png" alt="VitalityScreen Logo" class="logo">
-        <h1>Chronic Disease Risk Survey</h1>
+        <h1>Comprehensive Health Risk Survey</h1>
         <form id="surveyForm">
             <label>Sex:
-                <select name="sex" required>
-                    <option value="">Select</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
+                <select name="sex" required><option value="">Select</option><option value="Male">Male</option><option value="Female">Female</option></select>
             </label>
             <label>Age: <input type="number" name="age" required></label>
+            <label>Height (cm): <input type="number" name="height" required></label>
+            <label>Weight (kg): <input type="number" name="weight" required></label>
+            <label>Waist Circumference (cm): <input type="number" name="waist" required></label>
+            <label>Do you smoke? <select name="smoke" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Exercise per week: <select name="exercise" required><option value="">Select</option><option>None</option><option>1-2</option><option>3-5</option><option>6+</option></select></label>
+            <label>Diet quality: <select name="diet" required><option value="">Select</option><option>Poor</option><option>Average</option><option>Good</option></select></label>
+            <label>Alcohol consumption: <select name="alcohol" required><option value="">Select</option><option>None</option><option>Occasionally</option><option>Regularly</option></select></label>
+            <label>High blood pressure? <select name="bp" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>High cholesterol? <select name="cholesterol" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Diabetes or prediabetes? <select name="diabetes" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Kidney disease? <select name="kidney" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Family history of heart disease? <select name="fh_heart" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Family history of cancer? <select name="fh_cancer" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Family history of dementia? <select name="fh_dementia" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Family history of diabetes? <select name="fh_diabetes" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Often feel stressed? <select name="stress" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Sleep well most nights? <select name="sleep" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Memory or concentration issues? <select name="cognitive" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Fracture since age 40? <select name="fracture" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Joint pain or stiffness? <select name="joint" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
+            <label>Bone-strengthening activity? <select name="activity" required><option value="">Select</option><option>Yes</option><option>No</option></select></label>
             <button type="submit">Submit</button>
         </form>
         <div id="dashboard" style="margin-top:20px;"></div>
