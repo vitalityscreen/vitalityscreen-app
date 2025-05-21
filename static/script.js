@@ -14,17 +14,15 @@ document.getElementById("surveyForm").addEventListener("submit", function(event)
     .then(response => response.json())
     .then(data => {
         const dashboard = document.getElementById("dashboard");
-        dashboard.innerHTML = "";
+        dashboard.innerHTML = "<h2>Assessment Results:</h2>";
         data.conditions.forEach(item => {
-            const card = document.createElement("div");
-            card.className = "card";
-            card.innerHTML = `
-                <h3>${item.condition}</h3>
-                <p><strong>Risk:</strong> ${item.risk}</p>
-                <p><strong>Tests:</strong> ${item.tests.join(", ")}</p>
-                <p><strong>Schedule:</strong> ${item.schedule}</p>
-            `;
-            dashboard.appendChild(card);
+            const div = document.createElement("div");
+            div.className = "result-card";
+            div.innerHTML = `<strong>${item.condition}</strong><br>
+                Risk: ${item.risk}<br>
+                Tests: ${item.tests.join(", ")}<br>
+                Schedule: ${item.schedule}<br><br>`;
+            dashboard.appendChild(div);
         });
     });
 });
