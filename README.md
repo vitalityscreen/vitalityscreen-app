@@ -1,1 +1,0 @@
-# vitalityscreen-app
